@@ -13,6 +13,7 @@ const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
 
     useEffect(() => {
         const lenisInstance = new Lenis();
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setLenis(lenisInstance);
 
         function raf(time: number) {

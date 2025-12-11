@@ -15,7 +15,7 @@ const Skills = () => {
 
     useGSAP(() => {
         // Title Animation
-        const titleElements = (titleRef.current as any).children;
+        const titleElements = (titleRef.current as unknown as HTMLDivElement).children;
         gsap.from(titleElements, {
             scrollTrigger: {
                 trigger: titleRef.current,
@@ -44,8 +44,8 @@ const Skills = () => {
         // Skill Items Animation
         // We need to select the skill items. Since they are direct children of the container inside map or static
         // In the previous static version, they were just divs. I will add a ref to the wrapper div.
-        const skillItems = (skillsRef.current as any).children;
-        Array.from(skillItems).forEach((item: any, index) => {
+        const skillItems = (skillsRef.current as unknown as HTMLDivElement).children;
+        Array.from(skillItems).forEach((item: Element, index) => {
             const direction = index % 2 === 0 ? -100 : 100; // Alternating directions
 
             gsap.from(item, {

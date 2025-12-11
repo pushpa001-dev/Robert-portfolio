@@ -29,7 +29,7 @@ const About = () => {
         });
 
         // Text Animation
-        const textElements = (textRef.current as any).children;
+        const textElements = (textRef.current as unknown as HTMLDivElement).children;
         gsap.from(textElements, {
             scrollTrigger: {
                 trigger: textRef.current,
@@ -44,7 +44,7 @@ const About = () => {
         });
 
         // Stats Animation
-        const statElements = (statsRef.current as any).children;
+        const statElements = (statsRef.current as unknown as HTMLDivElement).children;
         gsap.from(statElements, {
             scrollTrigger: {
                 trigger: statsRef.current,
@@ -95,7 +95,7 @@ const About = () => {
                     </p>
 
                     <p className="text-gray-600 text-lg leading-relaxed">
-                        My journey in tech is fueled by curiosity and a commitment to continuous learning. Whether it's mastering the latest framework or optimizing code for speed, I'm always looking for ways to improve and innovate.
+                        My journey in tech is fueled by curiosity and a commitment to continuous learning. Whether it&apos;s mastering the latest framework or optimizing code for speed, I&apos;m always looking for ways to improve and innovate.
                     </p>
 
                     <div ref={statsRef} className="pt-4 flex gap-8">

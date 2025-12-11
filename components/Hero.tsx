@@ -87,7 +87,7 @@ const Hero = () => {
             <div ref={textContainer} className="w-full  md:w-1/2  flex flex-col items-start md:items-end space-y-8 z-10 mt-10 md:mt-0">
                 <div className="space-y-2 w-full text-start md:text-start text-shadow">
                     <h1 className="text-6xl md:text-9xl lg:text-[150px] font-bebas-neue  text-black">
-                        HI,I'm <span className="text-black">Robert</span>
+                        HI,I&apos;m <span className="text-black">Robert</span>
                     </h1>
                     <h2 className="text-4xl md:text-4xl 2xl:text-6xl font-bebas-neue w-full text-black">
                         Frontend Developer
